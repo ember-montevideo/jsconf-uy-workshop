@@ -37,6 +37,6 @@
     <div class="col-xs-1 col-md-1 col-time"></div>
   </div>
   {{#each model.tracks as |track|}}
-    {{a-track title=track.title artist=model.artist album=model.name duration=track.duration}}
+    {{a-track title=track.title artist=model.artist album=model.name duration=track.duration source=track.sourceUrl}}
   {{/each}}
 </div>
