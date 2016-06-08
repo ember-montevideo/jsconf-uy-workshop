@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  fastboot: Ember.inject.service(),
+
   afterModel(album) {
-    return album.get('tracks');
+    if (this.get('fastboot.isFastBoot')) {
+      return album.get('tracks');
+    }
   }
 });
