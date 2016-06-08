@@ -4,7 +4,7 @@ const { computed } = Ember;
 
 export default Ember.Service.extend({
   audio: computed(function() {
-    return new Audio;
+    return new Audio();
   }),
   play(title, source) {
     document.title = `▶︎ Now playing ${title}...`;
